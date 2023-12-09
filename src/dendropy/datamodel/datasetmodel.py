@@ -221,8 +221,7 @@ class DataSet(
             self._process_taxon_namespace_directives(kwargs)
             self.comments = []
             if len(args) == 1 and not isinstance(args[0], DataSet):
-                for item in args[0]:
-                    self.add(item)
+                self.add(args[0])
         if kwargs:
             raise TypeError("Unrecognized or unsupported arguments: {}".format(kwargs))
 
